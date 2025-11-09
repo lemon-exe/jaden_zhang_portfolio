@@ -397,6 +397,7 @@ entry:hover overlay {
     opacity: 0;
     transform: scale(1.05);
     padding-left: 0px;
+	pointer-events: none
 }
 
 
