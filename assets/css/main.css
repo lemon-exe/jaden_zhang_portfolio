@@ -48,7 +48,6 @@ header {
     text-align: left;
     width: 100%;
     float: left;
-    float: left;
     margin-top: 15px;
     margin-left: 25px;
     letter-spacing: 4px;
@@ -435,6 +434,7 @@ entry:hover overlay {
 }
 entry:hover p.subtitle_dark {
     color: #F5F5F5;
+    transition: all 0.3s ease;
 }
 
 
@@ -681,8 +681,28 @@ h4 {
     color: #727272;
     overflow: hidden;
 }
+projects .style1 .norm_text {
+    margin: 0;
+    text-align: center;
+    width: 60%;
+    display: block;
+    max-height: 0px;
+}
+entry:hover p.norm_text {
+    display: block;
+    transition: all 1s ease;
+    color: #FFE7C0;
+    max-height: 100px;
+}
+
+
+
 .no {
 }
+projects .style1 .subtitle_dark {
+    margin: 0;
+}
+
 h2 {
 
 }
