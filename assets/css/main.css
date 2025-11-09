@@ -146,8 +146,7 @@ section {
     letter-spacing: 1px;
 }
 p {
-    color: #FEC05D
-!;
+    color: #FEC05D;
 
 }
 .about {
@@ -199,6 +198,10 @@ projects {
     justify-content: space-between;
 
 }
+.gallery projects warp {
+	pointer-events: none
+}
+
 .container .gallery div.title  {
     height: 50px;
     display: flex;
