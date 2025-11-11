@@ -10,6 +10,8 @@ body {
     font-style: normal;
     font-weight: 200;
     min-width: 1200px;
+    height: auto;
+    z-index: -10;
 }
 /* Container */
 .container {
@@ -23,9 +25,14 @@ h-line {
     width: 3%;
     height: 6px;
     background-color: #FFE7C0;
-    display: flex;
+    display: block;
     margin-left: 48.5%;
 }
+h-line.center {
+    margin: 0;
+
+}
+
 
 /* Navigation */
 header {
@@ -114,7 +121,7 @@ ul li:hover a {
     padding-top: 300px;
     /* [disabled]padding-bottom: 150px; */
     background-attachment: fixed;
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -126,11 +133,11 @@ ul li:hover a {
     background-size: 2000px auto;
 }
 .hero.main {
-    background-image: url(../images/Banner.png);
-    background-size: cover;
+    background-image: url("../images/TB%20(MAIN).jpg");
+    /* [disabled]background-size: cover; */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center -150px;
 }
 
 .container .hero div {
@@ -171,6 +178,21 @@ section {
     padding-right: 25px;
     display: flex;
 }
+section.desc {
+    flex-direction: column;
+}
+project {
+    padding: 20px;
+}
+
+.desc .title {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 112px;
+    justify-content: flex-start;
+}
+
+
 
 
 .light {
@@ -258,13 +280,6 @@ projects {
 	text-align: center;
 	float: left;
 	margin-top: 35px;
-}
-.gallery .thumbnail h4 {
-	margin-top: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #52BAD5;
 }
 .gallery .thumbnail p {
 	margin-top: 0px;
@@ -398,7 +413,7 @@ footer {
 
 
 }
-line {
+v-line {
     width: 6px;
     height: 100px;
     background-color: #FFE7C0;
@@ -413,12 +428,14 @@ entry img {
     z-index: 1;
     filter: blur(0.5px);
     /* [disabled]position: absolute; */
+    -o-object-fit: cover;
 }
 entry:hover img {
     transform: scale(1.05);
     filter: none;
     -o-object-fit: cover;
 }
+
 
 .style1 {
     width: 600px;
@@ -445,21 +462,37 @@ entry a {
     top: 0;
     left: 0;
     transition: all 0.5s ease;
-    opacity: 0.3;
+    opacity: 0.5;
     z-index: 2;
     pointer-events: none;
     display: block;
 }
 entry:hover overlay {
-    opacity: 0;
+    opacity: 0.3;
     transform: scale(1.05);
     padding-left: 0px;
-	pointer-events: none
+    pointer-events: none;
+    background-color: #14213D;
 }
 entry:hover p.subtitle_dark {
     color: #F5F5F5;
     transition: all 0.3s ease;
 }
+.desc.title {
+    width: auto;
+}
+h3.entry {
+    width: 100%;
+    text-align: left;
+    height: 36px;
+    display: block;
+}
+.title .norm_text {
+    display: block;
+}
+
+
+
 
 
 
@@ -696,9 +729,7 @@ nav ul li {
     height: auto;
     font-size: 24px;
     min-width: 0px;
-}
-h4 {
-    padding-left: 50px;
+    opacity: 1;
 }
 
 .norm_text {
@@ -733,7 +764,7 @@ h2 {
 
 }
 h3 {
-    display: flex;
+    display: block;
     text-align: right;
     height: 80%;
     width: 120px;
