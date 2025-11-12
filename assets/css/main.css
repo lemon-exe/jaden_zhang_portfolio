@@ -32,22 +32,16 @@ h-line.center {
     margin: 0;
 
 }
+project h-line.center {
+    margin-left: 20px;
+
+}
+
 
 
 /* Navigation */
 header {
-    height: 8%;
-    background-color: #141414;
-    border-bottom: 1px solid #2C9AB7;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    color: #D6D6D6;
-    transition: all 0.8s linear;
+    
 }
 
 
@@ -81,11 +75,28 @@ nav {
 ul   {
     list-style: none;
     float: right;
-    width: 25%;
+    width: auto;
     text-align: right;
     display: flex;
     justify-content: flex-end;
 }
+project ul {
+    float: left;
+    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    align-content: flex-start;
+    margin: 0;
+    list-style: square;
+    overflow: visible;
+}
+project .points .norm_text {
+    overflow: visible;
+}
+
+
 ul li  {
     float: left;
     font-size: 14px;
@@ -94,10 +105,21 @@ ul li  {
     letter-spacing: 2px;
     font-weight: bold;
     transition: all 0.5s linear;
-    display: inline-block;
+    display: block;
+    margin-bottom: 0px;
 }
+project ul li {
+    text-align: left;
+    list-style-type: square;
+    font-weight: normal;
+    display: list-item;
+    list-style-position: outside;
+    margin-bottom: 7px;
+}
+
 ul li a {
     text-decoration: none;
+    transition: all 0.3s linear;
 }
 ul li:hover a {
     color: #FFE7C0;
@@ -181,15 +203,44 @@ section {
 section.desc {
     flex-direction: column;
 }
+project div  {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    text-align: justify;
+    height: auto;
+}
+project .points {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    align-items: flex-start;
+}
+
+project div div  {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: auto;
+}
+
+
 project {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
 .desc .title {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 112px;
-    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -482,17 +533,66 @@ entry:hover p.subtitle_dark {
     width: auto;
 }
 h3.entry {
-    width: 100%;
+    width: 50%;
     text-align: left;
     height: 36px;
     display: block;
 }
-.title .norm_text {
+.title.norm_text {
     display: block;
+}
+h4.entry {
+    width: 50%;
+    display: block;
+    text-align: right;
+    height: 36px;
 }
 
 
 
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+}
+
+.slide img {
+    height: 600px;       /* fixed height */
+    width: auto;         /* width adapts to preserve aspect ratio */
+    object-fit: contain; /* ensures full image visible, no crop */
+}
+
+.slide p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
 
 
 
@@ -716,12 +816,7 @@ nav ul li {
 	padding-top: 0px;
 }
 }
-.topbar {
-    background-color: #BC8A8B;
 
-}
-#topbar {
-}
 .subtitle   {
     color: #D6D6D6;
     letter-spacing: 2px;
@@ -736,6 +831,7 @@ nav ul li {
     font-weight: 400;
     color: #727272;
     overflow: hidden;
+    font-style: normal;
 }
 projects .style1 .norm_text {
     margin: 0;
@@ -752,11 +848,33 @@ entry:hover p.norm_text {
 }
 
 
-
-.no {
-}
 projects .style1 .subtitle_dark {
     margin: 0;
+}
+
+
+.topbar {
+    
+    font-size: 18px;
+
+}
+#topbar {
+    height: 50px;
+    background-color: #141414;
+    border-bottom: 1px solid #2C9AB7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #D6D6D6;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 80px;
+    padding-bottom: 10px;
+    transition: all 0.8s linear;
 }
 
 h2 {
