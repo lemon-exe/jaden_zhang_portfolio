@@ -2,11 +2,25 @@
 
 document.querySelectorAll('.carousel').forEach(carousel => {
   const slides = carousel.querySelector('.slides');
-  const slideCount = carousel.querySelectorAll('.slide').length;
+  const slideElems = carousel.querySelectorAll('.slide');
+  const slideCount = slideElems.length;
   let index = 0;
+
+  const resetInactiveVideos = () => {
+    slideElems.forEach((slide, i) => {
+      const video = slide.querySelector('video');
+      if (!video) return; //slide aint video
+
+      if (i !== index) { //resets inactive 
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  };
 
   const update = () => {
     slides.style.transform = `translateX(${-index * 100}%)`;
+    resetInactiveVideos();  // mute inactive slides' vids
   };
 
   carousel.querySelector('.next').addEventListener('click', () => {
@@ -19,6 +33,9 @@ document.querySelectorAll('.carousel').forEach(carousel => {
     update();
   });
 });
+
+
+
 
 
 

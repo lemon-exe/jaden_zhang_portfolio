@@ -70,6 +70,16 @@ nav {
     background-repeat: no-repeat;
     background-position: center -124px;
 }
+.hero.ut25 {
+	background-image: url("../images/TB%20(UT25).JPG");
+    background-position: 0% center;
+}
+.hero.ut26 {
+	background-image: url("../images/TB%20(UT26) 2.JPG");
+    background-position: 0% center;
+}
+
+
 
 ul   {
     list-style: none;
@@ -152,13 +162,15 @@ ul li:hover a {
     z-index: 10;
     overflow: hidden;
     background-size: 2000px auto;
+    background-repeat: no-repeat;
 }
 .hero.main {
-    background-image: url("../images/TB%20(MAIN).jpg");
+    background-image: url("../images/TB%20(MAIN).png");
     /* [disabled]background-size: cover; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center -150px;
+    filter: sepia(30%);
 }
 
 .container .hero div {
@@ -311,8 +323,8 @@ projects {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: space-between;
-
+    justify-content: center;
+    margin-top: 15px;
 }
 
 
@@ -488,14 +500,26 @@ entry:hover img {
 
 
 .style1 {
-    width: 600px;
-    height: 400px;
+    width: 40%;
+    /* [disabled]height: auto; */
     display: flex;
     margin: 20px;
     position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 3/2
+}
+.style2 {
+    width: 50%;
+    /* [disabled]height: auto; */
+    display: flex;
+    margin: 20px; 
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16/9
 }
 entry a {
     position: absolute;
@@ -532,7 +556,7 @@ entry:hover p.subtitle_dark {
     width: auto;
 }
 h3.entry {
-    width: 50%;
+    width: 70%;
     text-align: left;
     height: 36px;
     display: block;
@@ -563,11 +587,21 @@ h4.entry {
 }
 
 .slide {
-  min-width: 100%;
-  text-align: center;
+    min-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .slide img {
+    height: 600px;       /* fixed height */
+    width: auto;         /* width adapts to preserve aspect ratio */
+    object-fit: contain; /* ensures full image visible, no crop */
+    max-width: 90%;
+}
+.slide video {
     height: 80vh;       /* fixed height */
     width: auto;         /* width adapts to preserve aspect ratio */
     object-fit: contain; /* ensures full image visible, no crop */
@@ -575,8 +609,9 @@ h4.entry {
 }
 
 .slide p {
-  margin-top: 8px;
-  font-size: 16px;
+    margin-top: 8px;
+    font-size: 16px;
+    max-width: 90%;
 }
 
 button.prev,
@@ -593,6 +628,17 @@ button.next {
 
 button.prev { left: 10px; }
 button.next { right: 10px; }
+a {
+    color: #14213D;
+    text-decoration: none;
+}
+.slide p a {
+    color: inherit;
+    font-weight: bolder;
+}
+
+
+
 
 
 
@@ -833,7 +879,7 @@ nav ul li {
     overflow: hidden;
     font-style: normal;
 }
-projects .style1 .norm_text {
+projects entry .norm_text {
     margin: 0;
     text-align: center;
     width: 60%;
@@ -845,11 +891,12 @@ entry:hover p.norm_text {
     transition: all 1s ease;
     color: #FFE7C0;
     max-height: 100px;
+	pointer-events: none;
+	
 }
-
-
-projects .style1 .subtitle_dark {
+projects entry .subtitle_dark {
     margin: 0;
+	pointer-events: none;
 }
 
 
