@@ -634,7 +634,7 @@ h4.entry {
     max-width: 90%;
 }
 .slide video {
-    height: 80vh;       /* fixed height */
+    height: 600px;       /* fixed height */
     width: auto;         /* width adapts to preserve aspect ratio */
     object-fit: contain; /* ensures full image visible, no crop */
     max-width: 90%;
