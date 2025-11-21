@@ -35,23 +35,19 @@
     
 	<project>
     <div class="title">
-      <h3 class="subtitle_dark entry" style="">GD Optimized DV Steering Motor Mount</h3>
-      <h4 class="norm_text entry">October 2025 - November 2025</h4>
+      <h3 class="subtitle_dark entry" style="">Digital/Virtual Processes</h3>
     </div>
     <h-line class="center"></h-line>
     <div class="points">
       <div>
         <p class="norm_text"> As a part of optimizing our DV/autonomous systems, our DV steering system has been revamped from the early-stage iteration last year's chain drive, to a much more low profile and easy maintence shaft-coupled motor. To facilitate this, I was responsible for generating and optimizing an mount to couple the DV steering motor, the iterated custom steering rack, and the vehicle chassis. 
 		</p>
-        <p class="norm_text">Supervised by: Mo Taban, Hunzala Rajput, under UTFR.</p>
       </div>
       <ul class="norm_text">
-        <li> Used generative design feature in Fusion360 and simple keep/obstacle geometry CAD made with Fusion360 to iterate more than 30 times, each time with up to 24 steps, to optimize mount</li>
-		<li> Geometry measuring and analysis of the main vehicle CAD assembly, with more than 3000 parts, in Solidworks to ensure fit, alignment and legality of mount placement/design </li> 
-		<li> Topology repair and model cleanup using Ansys SpaceClaim to allow for mesh generation of a STEP file of the design for finite element analysis (FEA) </li>
-        <li> FEA through Ansys Workbench/Mechanical to ensure equivalent (von Mises) stress and deformation visualizations to ensure sufficently high safety factor (2) in operation as well as well as consideration of fatigue failure</li>
-		<li> Benchmark iterated designs with 100MPa to account for and prevent fatigue failure throughout operation of the generally more volatile mount design, as additive metalurgy with AlSi10mg is required </li>
-        <li> Basic prototyping using 3D printed PLA for one of the generated designs to ensure component fit</li>
+        <li> CAD using Solidworks to model quadcopter frames and hardware (McMaster-Carr) for 3D printing and ensuring compatability with purchased components including LiPo battery, flight controller/motor ESC stack, and motors </li>
+		<li> Firmware configuration and testing using Betaflight UAV firmware configurator to ensure proper signal channel alignment from radio transmitter to receiver to motor operations </li> 
+		<li> Applied frequency low sweept and D-notch type filters to remove gyroscope telemetry noise from frame vibrations and accurately read gyroscope/accelerometer measurements</li>
+      	
       </ul>
     </div>
     <div class="carousel">
@@ -87,8 +83,7 @@
 	  
 	<project>
     <div class="title">
-      <h3 class="subtitle_dark entry" style="">Steering Column Chassis Connection </h3>
-      <h4 class="norm_text entry">September 2025 - October 2025</h4>
+      <h3 class="subtitle_dark entry" style="">Physical/Manufacturing Processes</h3>
     </div>
     <h-line class="center"></h-line>
     <div class="points">
@@ -124,22 +119,21 @@
 	<project>
     <div class="title">
       <h3 class="subtitle_dark entry" style="">Proportional Valve Study</h3>
-      <h4 class="norm_text entry">July 2025 - August 2025</h4>
+      <!-- <h4 class="norm_text entry">July 2025 - August 2025</h4> -->
     </div>
     <h-line class="center"></h-line>
     <div class="points">
       <div>
-        <p class="norm_text"> With the introduction of an optimized and accessible proportioning valve, proper documentation for knowledge transfer to recruits as well as for future reference. The construction of this document involved understanding and simulating high-level vehicle dynamics, along with the physical operation of proportional valves.  </p>
-        <p class="norm_text">In collaboration with: Mo Taban, Bryan Vu, Nam Nguyen under UTFR.</p>
+        <p class="norm_text"> As with any somewhat long lasting project, documentation of design choices and any issues that arise is incredibly important. Troubleshooting has taken up the majority of my time throughout this project, and being able to track why decision were made and how to solve common issues is an integral part of staying efficiently progressing.</p>
+	    <p class="norm_text"> Though informal, the following document (accurate as of April 2025 due to exporting issues) is upkept daily with improvements to the quadcopter.</p>
+        
       </div>
       <ul class="norm_text">
-        <li> Clear and technical language to formally document design choices and justification for effective future reference and knowledge transfer </li>
-		<li> Simulated vehicle weight transfers as a function of braking force, with a fixed deceleration of 1.6g to model the ideal brake curve </li>
-        <li> Used Python MatPlotLib to plot the weight transfer function as well as the actual braking line when using a dual master cylinder (front, rear) along with a balance bar and adjustable proportioning valve</li>
-        <li>Utilized the brakes system spreadsheet to track constants and values to effectively troubleshoot modelling results</li>
+        <li> Logging issues and TODOs as they occur throughout all major days spent to track design issues and solutions</li>
+		<li> Tracking design iterations through tests (motors, radio receiver/transmitter, flight controller, gryoscope) uploaded on Youtube</li>
       </ul>
     </div>
-    <div class="slide"> <iframe src="assets/documents/prop_valve.pdf" width="100%" height="900" style="border:0"></iframe>
+    <div class="slide"> <iframe src="assets/documents/notebook.pdf" width="100%" height="900" style="border:0"></iframe>
     </div>
       
     </project> </section>
