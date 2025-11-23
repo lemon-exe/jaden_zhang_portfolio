@@ -15,7 +15,6 @@
     </div>
     <ul>
       <li><a href="index.html" class="norm_text">HOME</a></li>
-      <li><a href="#about" class="norm_text">ABOUT</a></li>
       <li> <a href="#contact" class="norm_text">CONTACT</a></li>
     </ul>
   </header>
@@ -35,45 +34,49 @@
     
 	<project>
     <div class="title">
-      <h3 class="subtitle_dark entry" style="">Digital/Virtual Processes</h3>
+      <h3 class="subtitle_dark entry" style="">Quadcopter v3 (Fork)</h3>
     </div>
     <h-line class="center"></h-line>
     <div class="points">
       <div>
-        <p class="norm_text"> As a part of optimizing our DV/autonomous systems, our DV steering system has been revamped from the early-stage iteration last year's chain drive, to a much more low profile and easy maintence shaft-coupled motor. To facilitate this, I was responsible for generating and optimizing an mount to couple the DV steering motor, the iterated custom steering rack, and the vehicle chassis. 
+        <p class="norm_text"> The third major iteration of the quadcopter, v3 leverages its new compliant TPU landing gear and major D-type filters to take off and stabalize better. This design also finally fixes the issue of a vibrating frame when idling on the ground, as its landing gear can absorb the slight but compounding vibrations generated naturally from the spinning motors. 
+		</p>
+		<p class="norm_text"> Next steps involve improving the arm effectiveness using warjet carbon fibre sheets and battery location to lower center of gravity.
+		</p>
+		<p class="norm_text"> The designation, <em>Fork</em>, comes from the inspiration of the shock absorber designs being motorcycle fork covers.
 		</p>
       </div>
       <ul class="norm_text">
         <li> CAD using Solidworks to model quadcopter frames and hardware (McMaster-Carr) for 3D printing and ensuring compatability with purchased components including LiPo battery, flight controller/motor ESC stack, and motors </li>
 		<li> Firmware configuration and testing using Betaflight UAV firmware configurator to ensure proper signal channel alignment from radio transmitter to receiver to motor operations </li> 
-		<li> Applied frequency low sweept and D-notch type filters to remove gyroscope telemetry noise from frame vibrations and accurately read gyroscope/accelerometer measurements</li>
-      	
+		<li> Applied D-type low bypass sweep and D-notch type frequency filters to remove frame vibration noise from gryoscope telemetry and accurately read gyroscope/accelerometer measurements</li>
+		<li>Telemetry data analysis with SpeedyBee Flight Controller's blackbox implement to detect and take steps to correct vibration noise issues, motor RPM sensitivity/PID settings, and faulty soldering through inconsistent motor power draw</li>
+		<li> Radio receiver (FS-iA6B) and transmitter (FS-i6 2A) to allow for remote controlled arming, flight, and landing the RC quadcopter </li> 
+		<li> 3D print settings slicing and tuning for materials including ABS, PETG, and TPU 95A </li>
       </ul>
     </div>
     <div class="carousel">
       <div class="slides">
-        <div class="slide"> <img src="assets/images/UT26/dv_mount_1.png" alt="Image 1">
-          <p>The final operating version of the DV steering motor mount (highlighted in yellow). Shown attached in the main steering assembly, with the steering rack, rack ends, and a bit of the steering column. Fasteners and bolts are are all chosen and taken from <a href="https://www.mcmaster.com/">McMaster-Carr</a> </p>
+        <div class="slide"> <img src="assets/images/drone/drone_1.png" alt="Image 1">
+          <p>The currently operating design, this iteration is more aimed towards optimizing landing and takeoff smoothness, as well as modularlity of the drone to allow for more flexible redesigning. </p>
         </div>
-		<div class="slide"> <img src="assets/images/UT26/dv_mount_6.png" alt="Image 1">
-          <p>The Ansys FEA solution for total deformation, simulating manual steering hitting a large bump on the left front wheel. Load cases can be seen on the left sidebar. Currently inactive is the DV steering tie rod and motor torque parameters, calculated from the maximum motor torque, while the active manual steering accounts for manual steering column forces. The bump case accounts for a large track mount present in one of our testing locations as well as in FSAE Germany competition. </p>
+		<div class="slide"> <img src="assets/images/drone/drone_5.png" alt="Image 1">
+          <p>The Solidworks assembly main CAD of the version 3 quadcopter. Labelled are mechanical components on the left, and electrical on the right</p>
         </div>
-		<div class="slide"> <img src="assets/images/UT26/dv_mount_7.png" alt="Image 1">
-          <p>The Ansys FEA solution for von-Mises stress. A responsibility as the designer of the component is to identify stress singularities, being a numerical artefact rather than a physical result. </p>
+		<div class="slide"> <img src="assets/images/drone/drone_2.png" alt="Image 1">
+          <p>The <em>Motor</em> tab of Betaflight Configurator (Flight Controller firmware configurations software). This tab includes general motor setup (not including PID here) on the left, and motor RPM/control testing on the right, along with a real time telemetry feedback graph on the top right.</p>
         </div>
-		<div class="slide"> <img src="assets/images/UT26/dv_mount_2.png" alt="Image 1">
-          <p>The generative design process available through Fusion 360 Student. Parameters of obstacle geometry (red, do not generate material here), keep geometry (green, must generate material here), initial geometry (yellow, initial design to be iterated), and load cases (arrows, showing torque and forces that the generated design should sustain with a specified safety factor). </p>
+		<div class="slide"> <img src="assets/images/drone/drone_3.png" alt="Image 1">
+          <p>The frequency analyser map for before (left) and after (right) specific D low bypass and D-notch type frequency filters tuned specifically to remove noise from this design, both taken from blackbox info after flight tests. Note the ^ shaped D-TERM Notch in the right chart, specifically configured to rectify the Max Noise of 105Hz from the first blackbox feedback. The change was in tuning filters and a new compliant landing mechanisms; it was implemented and documented August 27th, 2025
+		  </p>
         </div>
-		<div class="slide"> <img src="assets/images/UT26/dv_mount_3.png" alt="Image 1">
-          <p>The majority of generated mount designs. The iteration occurs in bettering load forces, and changing surrounding geometry to accomodate other systems' requirements</p>
-        </div>
-		<div class="slide"> <img src="assets/images/UT26/dv_mount_4.png" alt="Image 1">
-          <p>A preliminary 3D printed prototype of one of the v3 mounts. On the right is the original motor mount from UT25 (the previous design cycle).</p>
-        </div>
-		<div class="slide"> <img src="assets/images/UT26/dv_mount_5.png" alt="Image 1">
-          <p>Defeaturing the assembly, using Ansys Spaceclaim, to allow for successful meshing in Ansys Mechanical for FEA. Red dots represent automatically detected irregularly small faces.</p>
+		<div class="slide"> <img src="assets/images/drone/drone_4.png" alt="Image 1">
+          <p>Some more visualization of the change from the previous slide, note that the motor commands after iteration were much more in sync, rather than the sort of crowding and interfering commands of before. Additionally, the gyroscope telemetry was much more stable (and realistic) in the improved design. </p>
         </div>
 		
+		<div class="slide"> <video src="assets/images/drone/drone_5.MP4" controls ></video>
+          <p>A recent flight test, mainly for stability in flight and control of the yaw axis. Roll and Pitch are also demonstrated to be quite responsive.</p>
+        </div>
         
       </div>
       <button class="prev">‹</button>
@@ -83,31 +86,35 @@
 	  
 	<project>
     <div class="title">
-      <h3 class="subtitle_dark entry" style="">Physical/Manufacturing Processes</h3>
+      <h3 class="subtitle_dark entry" style="">Pervious iterations</h3>
     </div>
     <h-line class="center"></h-line>
     <div class="points">
       <div>
-        <p class="norm_text">A new two-segment steering column calls for a new mounting system to the chassis tubes. I was responsible for the CAD of this connection system, accounting for compatability with both the Driver Interface and Chassis subsections. The designing of the system must also be designed to be easily adjustable (in CAD) and easily manufacturing.</p>
-        <p class="norm_text">Supervised by: Mo Taban, Sam Bahrami, Kody Cao, under UTFR.</p>
+        <p class="norm_text">No design is constructed perfectly from the very first iteration, even those designed by the ever-so-perfect myself. The two major previous prototypes are displayed below. Though these design choices and concerns are detailed in the engineering notebook, a brief, high-level overview is presented here.</p>
+		
+		<p class="norm_text">Additionally, many individual components have gone over iterations as well as a result of significant faults that could be relieved without making major revisions to the current design. </p>
       </div>
       <ul class="norm_text">
-        <li> Solidworks CAD, using sheet metal, pipe constructor, 3D sketches, and other more basic operations and mates to construct the assembly, including fasteners and motion support bearings in assemblies with 3000 components</li>
-        <li> Made sketches using responsive global variables in assemblies and subassemblies to allow for the easy adjustment of the column angles/lengths, as well as support angles of load-bearing tubes.</li>
-        <li> Cross-subsection collaboration to communicate mounting methods, new design constraints and proper mating through assemblies, while utilizing a push-pull collaborative file sharing system</li>
-        <li> Iterated on last year's design to optimize for driver comfort, as this component can be very restricting, while retaining the supporting mechanisms</li>
+        <li> Iterated entire project design multiple times by following the Design-Make-Test-Analyse (DMTA) framework by identifying key faults and achievements of each design </li>
+        <li> BoM construction of designs, and by weighing 3D printed parts and purchased electronics/hardware, to estimate mass for simple calculations</li>
+        <li> Document, Assembly and Component local file organization of Solidworks assemblies/parts files, Adobe Illustrator notebook, and .csv blackbox files for consistent and organized file management</li>
       </ul>
     </div>
     <div class="carousel">
       <div class="slides">
-        <div class="slide"> <img src="assets/images/UT26/col_mount_1.png" alt="Image 1">
-          <p>The entire column mount, present in our Main assembly, attached to the chassis by steel tubes, and attaching to a steering wheel by the quick release towards the top, while not interfering with the dashboard. The double U-joint is also a new addition that I modelled based on a brief drawing.</p>
+        <div class="slide"> <img src="assets/images/drone/drone_prev_1.png" alt="Image 1">
+          <p>The first design was focused solely on getting something up in the air. The entire frame was print-in-plane and required no assembly at all. This design, though it was able to hover for a very limited time, encountered many issues, including strong frame vibrations, weak/inflexible landing gear, poor soldering, and eventually accidentally severing a radio signal wire with its propeller due to faulty wire management. Nicknamed <em>Rabbit</em> for its antennae looking like rabbit ears. </p>
         </div>
-        <div class="slide"> <img src="assets/images/UT26/col_mount_2.png" alt="Image 2">
-          <p>A closer look at the mounting system. Each support point contains a press fitted ball bearing, a single sided aluminium bearing holder, and all bearing holes are bolted to the support plate which is then welded to the chassis tubes. Proper alignment with the chassis and with the bearing holder holes was a tedious journey.</p>
+		<div class="slide"> <img src="assets/images/drone/drone_prev_2.png" alt="Image 1">
+          <p>The second iteration aimed to be able to lift off more smoothly, while protecting its internals to not have any construction failures like the first did. This model still printed the large part of its frame, only have separate landing gear/feet to support. Additionally, the battery holder was improved from just tape to a solid PLA cage assembly, and Python MatplotLib was used to plot and analyze motor and telemetry functions. The frame initially held four walls for electronics protection, but eventually were found to be inefficient, and the bowing of the large frame was fixed by stacking an inverted frame beneath, earning its designation, <em>Pancake</em>.</p>
         </div>
-        <div class="slide"> <img src="assets/images/UT26/col_mount_3.png" alt="Image 3">
-          <p>A more inclusive overview of the column and column mount and its surroundings.</p>
+		<div class="slide"> <img src="assets/images/drone/drone_prev_3.png" alt="Image 1">
+          <p>The currently operating design, this iteration is more aimed towards optimizing landing and takeoff smoothness, as well as modularlity of the drone to allow for more flexible redesigning. Additionally, the implementation of signficant analysis tools such as the blackbox viewer and frequency analysis map, allowed for better problem identification. The usage of more materials, such as TPU, stainless steel fasteners, and eventually carbon fibre allowed for a more targeted design for each component. The design of the landing gear, inspired by motorcycle fork covers, led to the nickname <em>Fork</em>.
+		  </p>
+        </div>
+		<div class="slide"> <img src="assets/images/drone/drone_prev_4.png" alt="Image 1">
+          <p>Some design iterations of individual components. Some components, such as the battery holders, were iterated along with the entire drone design, while other such as the landing gear and motor arms sometimes were iterated within the same overall design, highlighting the importance of the modularity introduced by v2 and improved on by v3. </p>
         </div>
         
       </div>
@@ -118,7 +125,7 @@
 	
 	<project>
     <div class="title">
-      <h3 class="subtitle_dark entry" style="">Proportional Valve Study</h3>
+      <h3 class="subtitle_dark entry" style="">Engineering Notebook</h3>
       <!-- <h4 class="norm_text entry">July 2025 - August 2025</h4> -->
     </div>
     <h-line class="center"></h-line>
@@ -133,7 +140,7 @@
 		<li> Tracking design iterations through tests (motors, radio receiver/transmitter, flight controller, gryoscope) uploaded on Youtube</li>
       </ul>
     </div>
-    <div class="slide"> <iframe src="assets/documents/notebook.pdf" width="100%" height="900" style="border:0"></iframe>
+    <div class="slide"> <iframe src="assets/documents/notebook.pdf" width="100%" height="700" style="border:0"></iframe>
     </div>
       
     </project> </section>
@@ -141,6 +148,13 @@
   <!-- Parallax Section --> 
   <!-- More Info Section --> 
   <!-- Footer Section --> 
+	  <section id="contact">
+  <div class="footer-content">
+    <span><a href="https://www.linkedin.com/in/jaden-zhang-588517322/" target="_blank" class="subtitle" rel="noopener">LinkedIn Profile</a></span>
+	<span><a href="mailto:jadenxuankai.zhang@mail.utoronto.ca" class="subtitle">jadenxuankai.zhang@mail.utoronto.ca</a></span>
+    <span class="subtitle">(647)-615-5808</span>
+  </div>
+</section>
   <!-- Copyrights Section -->
   <div class="copyright">&copy;2025 - <strong>I built this website :D</strong></div>
 </div>
