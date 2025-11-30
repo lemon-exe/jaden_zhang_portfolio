@@ -223,6 +223,25 @@ section {
     padding-right: 25px;
     display: flex;
 }
+.technicals {
+    /* [disabled]height: 600px; */
+    background-color: #3A3A3A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.technicals .technical {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding-top: 10px;
+}
+
+
+
+
 section.desc {
     flex-direction: column;
 }
@@ -671,6 +690,38 @@ a {
     color: inherit;
     font-weight: bolder;
 }
+.technicals .tech h-line {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.tech {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+.technicals .tech .desc {
+    text-align: center;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 8px;
+    display: block;
+    margin: 0;
+    color: #D6D6D6;
+    font-size: 14px;
+}
+
+.technicals .tech .subtitle {
+    display: block;
+    text-align: center;
+    color: #FFE7C0;
+}
+
+
+
 
 
 
@@ -977,7 +1028,10 @@ h5 {
     width: 100%;
     height: 24px;
     display: block;
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 5px;
     text-align: center;
 
 }
