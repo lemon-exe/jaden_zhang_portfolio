@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FSAE 25-26 - Jaden Zhang</title>
+<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="container"> 
+  <!-- Navigation -->
+  <header id="topbar">
+    <div>
+      <h4 class="topbar subtitle">Jaden Zhang</h4>
+    </div>
+    <ul>
+      <li><a href="index.html" class="norm_text">HOME</a></li>
+      <li> <a href="#contact" class="norm_text">CONTACT</a></li>
+    </ul>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero course">
+    <h2 class="header">Design Courses</h2>
+    <p class="tagline">University of Toronto  Mechanical Engineering </p>
+  </section>
+  <!-- About Section -->
+  <section class="desc">
+    <div>
+      <p class="norm_text">Since its inception in 1997, the University of Toronto Formula Racing Team (<a href="https://fsaeutoronto.ca">UTFR</a>) has undertaken the task of guilding a formula-style open-wheel race car from scratch annually. We compete in FSAE competitions in the United States as well as europe, specifically in the electric vehicle division. With the 2025-2026 season, our focus is zoned in on effectively implementing four-wheel drive, as well as optimizing many driverless (DV) assemblies, reducing mass and improving general efficiency.  </p>
+      <p class="norm_text">As a senior member in the newly consolidated vehicle controls subsection (encompassing manual and autonomous steering and brakes), my primary focus is to strengthen technical vehicle performance and deepen my exposure to industry design workflows and software processes. Additionally, as new recruits filter into the team, I also contribute to team development by helping train incoming recruits and implementing systematic knowledge transfer through theory-based briefings and practical exercises. </p>
+    </div>
+    
+	<project>
+    <div class="title">
+      <h3 class="subtitle_dark entry" style="">GD Optimized DV Steering Motor Mount</h3>
+      <h4 class="norm_text entry">October 2025 - November 2025</h4>
+    </div>
+    <h-line class="center"></h-line>
+    <div class="points">
+      <div>
+        <p class="norm_text"> As a part of optimizing our DV/autonomous systems, our DV steering system has been revamped from the early-stage iteration last year's chain drive, to a much more low profile and easy maintence shaft-coupled motor. To facilitate this, I was responsible for generating and optimizing an mount to couple the DV steering motor, the iterated custom steering rack, and the vehicle chassis. 
+		</p>
+        <p class="norm_text">Supervised by: Mo Taban, Hunzala Rajput, under UTFR.</p>
+      </div>
+      <ul class="norm_text">
+        <li> Used generative design feature in Fusion360 and simple keep/obstacle geometry CAD made with Fusion360 to iterate more than 30 times, each time with up to 24 steps, to optimize mount</li>
+		<li> Geometry measuring and analysis of the main vehicle CAD assembly, with more than 3000 parts, in Solidworks to ensure fit, alignment and legality of mount placement/design </li> 
+		<li> Topology repair and model cleanup using Ansys SpaceClaim to allow for mesh generation of a STEP file of the design for finite element analysis (FEA) </li>
+        <li> FEA through Ansys Workbench/Mechanical to ensure equivalent (von Mises) stress and deformation visualizations to ensure sufficently high safety factor (2) in operation as well as well as consideration of fatigue failure</li>
+		<li> Benchmark iterated designs with 100MPa to account for and prevent fatigue failure throughout operation of the generally more volatile mount design, as additive metalurgy with AlSi10mg is required </li>
+        <li> Basic prototyping using 3D printed PLA for one of the generated designs to ensure component fit</li>
+      </ul>
+    </div>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide"> <img src="assets/images/UT26/dv_mount_1.png" alt="Image 1">
+          <p>The final operating version of the DV steering motor mount (highlighted in yellow). Shown attached in the main steering assembly, with the steering rack, rack ends, and a bit of the steering column. Fasteners and bolts are are all chosen and taken from <a href="https://www.mcmaster.com/">McMaster-Carr</a> </p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT26/dv_mount_6.png" alt="Image 1">
+          <p>The Ansys FEA solution for total deformation, simulating manual steering hitting a large bump on the left front wheel. Load cases can be seen on the left sidebar. Currently inactive is the DV steering tie rod and motor torque parameters, calculated from the maximum motor torque, while the active manual steering accounts for manual steering column forces. The bump case accounts for a large track mount present in one of our testing locations as well as in FSAE Germany competition. </p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT26/dv_mount_7.png" alt="Image 1">
+          <p>The Ansys FEA solution for von-Mises stress. A responsibility as the designer of the component is to identify stress singularities, being a numerical artefact rather than a physical result. </p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT26/dv_mount_2.png" alt="Image 1">
+          <p>The generative design process available through Fusion 360 Student. Parameters of obstacle geometry (red, do not generate material here), keep geometry (green, must generate material here), initial geometry (yellow, initial design to be iterated), and load cases (arrows, showing torque and forces that the generated design should sustain with a specified safety factor). </p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT26/dv_mount_3.png" alt="Image 1">
+          <p>The majority of generated mount designs. The iteration occurs in bettering load forces, and changing surrounding geometry to accomodate other systems' requirements</p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT26/dv_mount_4.png" alt="Image 1">
+          <p>A preliminary 3D printed prototype of one of the v3 mounts. On the right is the original motor mount from UT25 (the previous design cycle).</p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT26/dv_mount_5.png" alt="Image 1">
+          <p>Defeaturing the assembly, using Ansys Spaceclaim, to allow for successful meshing in Ansys Mechanical for FEA. Red dots represent automatically detected irregularly small faces.</p>
+        </div>
+		
+        
+      </div>
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </div>
+    </project> 
+	  
+	<project>
+    <div class="title">
+      <h3 class="subtitle_dark entry" style="">Steering Column Chassis Connection </h3>
+      <h4 class="norm_text entry">September 2025 - October 2025</h4>
+    </div>
+    <h-line class="center"></h-line>
+    <div class="points">
+      <div>
+        <p class="norm_text">A new two-segment steering column calls for a new mounting system to the chassis tubes. I was responsible for the CAD of this connection system, accounting for compatability with both the Driver Interface and Chassis subsections. The designing of the system must also be designed to be easily adjustable (in CAD) and easily manufacturing.</p>
+        <p class="norm_text">Supervised by: Mo Taban, Sam Bahrami, Kody Cao, under UTFR.</p>
+      </div>
+      <ul class="norm_text">
+        <li> Solidworks CAD, using sheet metal, pipe constructor, 3D sketches, and other more basic operations and mates to construct the assembly, including fasteners and motion support bearings in assemblies with 3000 components</li>
+        <li> Made sketches using responsive global variables in assemblies and subassemblies to allow for the easy adjustment of the column angles/lengths, as well as support angles of load-bearing tubes.</li>
+        <li> Cross-subsection collaboration to communicate mounting methods, new design constraints and proper mating through assemblies, while utilizing a push-pull collaborative file sharing system</li>
+        <li> Iterated on last year's design to optimize for driver comfort, as this component can be very restricting, while retaining the supporting mechanisms</li>
+      </ul>
+    </div>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide"> <img src="assets/images/UT26/col_mount_1.png" alt="Image 1">
+          <p>The entire column mount, present in our Main assembly, attached to the chassis by steel tubes, and attaching to a steering wheel by the quick release towards the top, while not interfering with the dashboard. The double U-joint is also a new addition that I modelled based on a brief drawing.</p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT26/col_mount_2.png" alt="Image 2">
+          <p>A closer look at the mounting system. Each support point contains a press fitted ball bearing, a single sided aluminium bearing holder, and all bearing holes are bolted to the support plate which is then welded to the chassis tubes. Proper alignment with the chassis and with the bearing holder holes was a tedious journey.</p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT26/col_mount_3.png" alt="Image 3">
+          <p>A more inclusive overview of the column and column mount and its surroundings.</p>
+        </div>
+        
+      </div>
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </div>
+    </project> 
+	
+	<project>
+    <div class="title">
+      <h3 class="subtitle_dark entry" style="">Proportional Valve Study</h3>
+      <h4 class="norm_text entry">July 2025 - August 2025</h4>
+    </div>
+    <h-line class="center"></h-line>
+    <div class="points">
+      <div>
+        <p class="norm_text"> With the introduction of an optimized and accessible proportioning valve, proper documentation for knowledge transfer to recruits as well as for future reference. The construction of this document involved understanding and simulating high-level vehicle dynamics, along with the physical operation of proportional valves.  </p>
+        <p class="norm_text">In collaboration with: Mo Taban, Bryan Vu, Nam Nguyen under UTFR.</p>
+      </div>
+      <ul class="norm_text">
+        <li> Clear and technical language to formally document design choices and justification for effective future reference and knowledge transfer </li>
+		<li> Simulated vehicle weight transfers as a function of braking force, with a fixed deceleration of 1.6g to model the ideal brake curve </li>
+        <li> Used Python MatPlotLib to plot the weight transfer function as well as the actual braking line when using a dual master cylinder (front, rear) along with a balance bar and adjustable proportioning valve</li>
+        <li>Utilized the brakes system spreadsheet to track constants and values to effectively troubleshoot modelling results</li>
+      </ul>
+    </div>
+    <div class="slide"> <iframe src="assets/documents/prop_valve.pdf" width="100%" height="900" style="border:0"></iframe>
+    </div>
+      
+    </project> </section>
+  <!-- Stats Gallery Section --> 
+  <!-- Parallax Section --> 
+  <!-- More Info Section --> 
+  <!-- Footer Section --> 
+  <section id="contact">
+  <div class="footer-content">
+    <span><a href="https://www.linkedin.com/in/jaden-zhang-588517322/" target="_blank" class="subtitle" rel="noopener">LinkedIn Profile</a></span>
+	<span><a href="mailto:jadenxuankai.zhang@mail.utoronto.ca" class="subtitle">jadenxuankai.zhang@mail.utoronto.ca</a></span>
+    <span class="subtitle">(647)-615-5808</span>
+  </div>
+</section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2025 - <strong>I built this website :D</strong></div>
+</div>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

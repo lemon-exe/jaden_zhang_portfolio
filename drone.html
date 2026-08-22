@@ -27,24 +27,24 @@
   <section class="desc">
     <div>
       <p class="norm_text">With my joining of multiple design teams in my first year studying engineering at the University of Toronto, I had the chance to interact with many design pipelines and best practices for realizing a project from inception. Thus, during my first year's winter break, I commenced my own design project - a 7'' quadcopter remote-controlled drone. Ensuring that I had the full experience of a project, I experienced all aspects of the design process, including brainstorming, iterated candidate designs, design process documentation, CAD/digital modelling, manufacturing, prototyping, and a mind-breaking amount of troubleshooting both electronics and firmware. </p>
-      <p class="norm_text">Though still definitely a work-in-progress, the current iteration of the drone flies relatively well and stable, being in flight manuverable and able to land smoothly repeatedly. The next major steps include optimizing (for mass and stiffness) the four motor arms and baseplate by transitioning to thin carbon fiber, as well as revamping battery mounting for better stability and safety.</p>
-	  <p class="norm_text">Manufacturing currently paused due to my inability to effectively flash firmware to my Ender3 3D printer without bricking it :(</p>
+      <p class="norm_text">As the fourth major remodel, the current iteration of the drone combines many attributes of previous drones, building upon the v4's inline battery visual, but improving on its balance by accurately predicting CoG balance. Additionally, with the addition of a video transmission system, the drone can formally be named an FPV craft.</p>
 	  <p class="norm_text">December 2025 - Present</p>
-	  <p class="norm_text"> <strong>Key Skills: Full design cycle experience, Firmware editing and flashing, Telemetry data analysis, 3D print Manufacturing, Frequency Filter Application</strong></p>
+	  <p class="norm_text"> <strong>Key Skills: Full design cycle experience, Electrical handiwork, Firmware editing and flashing, Telemetry data analysis, 3D print Manufacturing, Frequency Filter Application</strong></p>
     </div>
     
 	<project>
     <div class="title">
-      <h3 class="subtitle_dark entry" style="">Quadcopter v3 (Fork)</h3>
+      <h3 class="subtitle_dark entry" style="">Quadcopter v5 (Shephard)</h3>
     </div>
     <h-line class="center"></h-line>
     <div class="points">
       <div>
-        <p class="norm_text"> The third major iteration of the quadcopter, v3 leverages its new compliant TPU landing gear and major D-type filters to take off and stabalize better. This design also finally fixes the issue of a vibrating frame when idling on the ground, as its landing gear can absorb the slight but compounding vibrations generated naturally from the spinning motors. 
+        <p class="norm_text"> 
+			The fifth major iteration of my quadcopter, v5 aims to combine aspects of all the previous design experience, and the addition of a VTX/camera system, to create a robust and functional hybrid FPV/cinematic drone. In addition to the implementation of VTX system, radio transmission was switched to ELRS (Foxeer + Radiomaster) from the more limiting AFHDS (Flysky), allowing also more auxillary channels. The inline battery design was also polished for assembly and compliance.
+		  </p>
+		<p class="norm_text"> As of current revision of my portfolio, this quadcopter iteration is being built. Design has almost concluded (issues with the Blender application for the shell).
 		</p>
-		<p class="norm_text"> Next steps involve improving the arm effectiveness using warjet carbon fibre sheets and battery location to lower center of gravity.
-		</p>
-		<p class="norm_text"> The designation, <em>Fork</em>, comes from the inspiration of the shock absorber designs being motorcycle fork covers.
+		<p class="norm_text"> The designation, <em>Shepard</em>, comes from the cyclops Polyphemus (Homer's "The Odyssey"), which was recently reintroduced into the public eye due to The Odyssey film by Christopher Nolan, released around when I started designing this iteration. 
 		</p>
       </div>
       <ul class="norm_text">
@@ -52,8 +52,9 @@
 		<li> Firmware configuration and testing using Betaflight UAV firmware configurator to ensure proper signal channel alignment from radio transmitter to receiver to motor operations </li> 
 		<li> Applied D-type low bypass sweep and D-notch type frequency filters to remove frame vibration noise from gryoscope telemetry and accurately read gyroscope/accelerometer measurements</li>
 		<li>Telemetry data analysis with SpeedyBee Flight Controller's blackbox implement to detect and take steps to correct vibration noise issues, motor RPM sensitivity/PID settings, and faulty soldering through inconsistent motor power draw</li>
-		<li> Radio receiver (FS-iA6B) and transmitter (FS-i6 2A) to allow for remote controlled arming, flight, and landing the RC quadcopter </li> 
-		<li> 3D print settings slicing and tuning for materials including ABS, PETG, and TPU 95A </li>
+		<li> Radio receiver (FS-iA6B, Radiomaster T8L) and transmitter (FS-i6 2A, Foxeer ELRS 2.4G LNA) to allow for remote controlled arming, flight, and landing the RC quadcopter </li> 
+		<li> 3D print settings slicing and tuning for materials including ABS, PETG/PETG-CF, and TPU 95A </li>
+		  <li> Basic FEA using Ansys to generally evaluate load cases for drone chassis and arms </li>
       </ul>
     </div>
     <div class="carousel">
@@ -61,11 +62,11 @@
         <div class="slide"> <img src="assets/images/drone/drone_1.png" alt="Image 1">
           <p>The currently operating design, this iteration is more aimed towards optimizing landing and takeoff smoothness, as well as modularlity of the drone to allow for more flexible redesigning. </p>
         </div>
-		<div class="slide"> <img src="assets/images/drone/drone_5.png" alt="Image 1">
-          <p>The Solidworks assembly main CAD of the version 3 quadcopter. Labelled are mechanical components on the left, and electrical on the right</p>
-        </div>
 		<div class="slide"> <img src="assets/images/drone/drone_2.png" alt="Image 1">
-          <p>The <em>Motor</em> tab of Betaflight Configurator (Flight Controller firmware configurations software). This tab includes general motor setup (not including PID here) on the left, and motor RPM/control testing on the right, along with a real time telemetry feedback graph on the top right.</p>
+          <p>Brief labeled breakdown of front chassis major assembly, as well as materials of the main pieces of the drone.</p>
+        </div>
+		<div class="slide"> <img src="assets/images/drone/drone_5.png" alt="Image 1">
+          <p>Quick disconnect system of the xt60 connector on the 6s LiPo battery. Previous designs </p>
         </div>
 		<div class="slide"> <img src="assets/images/drone/drone_3.png" alt="Image 1">
           <p>The frequency analyser map for before (left) and after (right) specific D low bypass and D-notch type frequency filters tuned specifically to remove noise from this design, both taken from blackbox info after flight tests. Note the ^ shaped D-TERM Notch in the right chart, specifically configured to rectify the Max Noise of 105Hz from the first blackbox feedback. The change was in tuning filters and a new compliant landing mechanisms; it was implemented and documented August 27th, 2025
@@ -75,8 +76,8 @@
           <p>Some more visualization of the change from the previous slide, note that the motor commands after iteration were much more in sync, rather than the sort of crowding and interfering commands of before. Additionally, the gyroscope telemetry was much more stable (and realistic) in the improved design. </p>
         </div>
 		
-		<div class="slide"> <video src="assets/images/drone/drone_5.MP4" controls ></video>
-          <p>A recent flight test, mainly for stability in flight and control of the yaw axis. Roll and Pitch are also demonstrated to be quite responsive.</p>
+		<div class="slide"> <video src="assets/images/drone/drone_v5.MOV" controls alt = "No flight test \n yet ;)"></video>
+          <p>No flight test... yet ;)</p>
         </div>
         
       </div>
@@ -111,10 +112,16 @@
           <p>The second iteration aimed to be able to lift off more smoothly, while protecting its internals to not have any construction failures like the first did. This model still printed the large part of its frame, only have separate landing gear/feet to support. Additionally, the battery holder was improved from just tape to a solid PLA cage assembly, and Python MatplotLib was used to plot and analyze motor and telemetry functions. The frame initially held four walls for electronics protection, but eventually were found to be inefficient, and the bowing of the large frame was fixed by stacking an inverted frame beneath, earning its designation, <em>Pancake</em>.</p>
         </div>
 		<div class="slide"> <img src="assets/images/drone/drone_prev_3.png" alt="Image 1">
-          <p>The currently operating design, this iteration is more aimed towards optimizing landing and takeoff smoothness, as well as modularlity of the drone to allow for more flexible redesigning. Additionally, the implementation of signficant analysis tools such as the blackbox viewer and frequency analysis map, allowed for better problem identification. The usage of more materials, such as TPU, stainless steel fasteners, and eventually carbon fibre allowed for a more targeted design for each component. The design of the landing gear, inspired by motorcycle fork covers, led to the nickname <em>Fork</em>.
+          <p>This iteration is more aimed towards optimizing landing and takeoff smoothness, as well as modularlity of the drone to allow for more flexible redesigning. Additionally, the implementation of signficant analysis tools such as the blackbox viewer and frequency analysis map, allowed for better problem identification. The usage of more materials, such as TPU, stainless steel fasteners, and eventually carbon fibre allowed for a more targeted design for each component. The design of the landing gear, inspired by motorcycle fork covers, led to the nickname <em>Fork</em>.
 		  </p>
         </div>
 		<div class="slide"> <img src="assets/images/drone/drone_prev_4.png" alt="Image 1">
+          <p>v4 came with generative design guided drone arms, allowing signficant mass down of the arms, while also increasing the stiffness of the arms with Bambu's PETG-CF filament. Additionally, the quadcopter has an inline configuration, having the battery being to the rear of the FC/ESC stack, rather than vertically located. This allowed for a neater packaging, but also shifted centre of mass rearwards significantly, increasing the load on the rear motors.</p>
+        </div>
+		<div class="slide"> <video src="assets/images/drone/drone_prev_4flight.MOV" controls ></video>
+          <p>A  flight test, for control and stability in flight, especially with the new inline configuration of v4 quadcopter.</p>
+        </div>
+		<div class="slide"> <img src="assets/images/drone/drone_prev_5.png" alt="Image 1">
           <p>Some design iterations of individual components. Some components, such as the battery holders, were iterated along with the entire drone design, while other such as the landing gear and motor arms sometimes were iterated within the same overall design, highlighting the importance of the modularity introduced by v2 and improved on by v3. </p>
         </div>
         

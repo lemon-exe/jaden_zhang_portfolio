@@ -76,6 +76,10 @@ nav {
     background-position: center 0px;
 }
 .hero.ut26 {
+    background-image: url("../images/TB%20(UT26) 3.PNG");
+    background-position: center top;
+}
+.hero.ut27 {
     background-image: url("../images/TB%20(UT26) 2.JPG");
     background-position: center top;
 }
@@ -1103,4 +1107,6 @@ h5 {
 
 #contact .footer-content span {
     display: block;
+}
+.ut27 {
 }
