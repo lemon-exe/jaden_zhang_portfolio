@@ -34,6 +34,129 @@
 		
       <p class="norm_text"><strong>Key Skills: Catia/3DExperience Environment, Solidworks components/assemblies, Ansys FEA, Fusion 360 Generative Design, knowledge transfer/documentation aggregation</strong></p>
     </div>
+	  <project>
+    <div class="title">
+      <h3 class="subtitle_dark entry" style="">Bobbins Transient Fatigue FEA </h3>
+      <h4 class="norm_text entry">September 2026 </h4>
+    </div>
+    <h-line class="center"></h-line>
+    <div class="points">
+      <div>
+        <p class="norm_text">As part of optimizing our entire vehicle package, our hub gear ratios are under heavy design considerations by our Suspension and Drivetrain departments. As such, packaging of the brake rotors and brake calipers are under scrutiny as well. As such, to accomodate the decision to expand the hub outwards by ~4mm in diameters, the floating brake discs, mounted by disc bobbins, would need to be expanded outwards.
+		  </p>
+		 <p class="norm_text"> Since the brake rotor area is already quite minimal, as dictated by our caliper choice, investigation into shrinking the bobbins by ~2mm in diameters each, while increasing bobbin count to retain similar rigidity. This FEA was also backed by testing data of braking torque, allowing us to evaluate lifetime by number of laps till failure. 
+		  </p>
+      </div>
+      <ul class="norm_text">
+        <li> Transient structural analysis of 8x small bobbins (compared to UT26 6x larger bobbins design) to validate new packaging, with proper multi-material consideration</li>
+        <li> Using Ansys Fatigue Tool to evaluate life of small aluminum brake bobbins with scaled lap data</li>
+        <li> 2D Ansys FEA evaluation of brake bobbin mounting with proper friction contact points between brake hubs, bobbins and brake rotors</li>
+		  <li> Usage of RaceStudio3 to evaulate and export lap data through testing AutoX (GoKart style) race tracks</li>
+      </ul>
+    </div>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide"> Basic deformation results of single (1.5x force FoS) actuation of brake calipers, applied on top contact patch. <img src="assets/images/UT27/bobbins1.png" alt="Image 1">
+          <p></p>
+        </div>
+        <div class="slide"> RaceStudio3 visualization of sensor readings from a particular UT25 testing run, used to evaluate lab # fatigue. <img src="assets/images/UT27/bobbins2.png" alt="Image 2">
+          <p> </p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT27/bobbins3.png" alt="Image 3">
+          <p>Fatigue life tool of Ansys used to evaluate bobbin minimum lifetime based on # of laps, using actual scaled testing data. </p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT27/bobbins4.png" alt="Image 3">
+          <p>Force for braking is centralized to just the top piston patch. This is to represent a worst case scenario with stress is incredibly concentrated and lockup occurs immediately.</p>
+        </div>
+        
+      </div>
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </div>
+    </project> 
+
+	<project>
+    <div class="title">
+      <h3 class="subtitle_dark entry" style="">3D Experience CATIA CAD Organization </h3>
+      <h4 class="norm_text entry">August 2026 - Present </h4>
+    </div>
+    <h-line class="center"></h-line>
+    <div class="points">
+      <div>
+        <p class="norm_text">After the 2025-2026 racing season, the UTFR racing team has decided to switch over CAD software 3DExperience CATIA. This section presents some of our organizational and implementation choices of our CAD structure. A major reason this switch from Solidworks was made was for much better PLM and administrative control, as well as much more collabortive cloud support. </p>
+      </div>
+      <ul class="norm_text">
+        <li> CAD In Catia 3DExperience using team-wide publications of structural and kinematic hardpoints through standard 3DX operations </li>
+        <li> Management of multiple skeleton parts to centralize and ensure stability of large assemblies (~ 200 parts)</li>
+        <li> Enterprise part number and structure management of  mutliple subsystem assemblies, and using publishing and Schemes/Latest Schemes file organization</li>
+        <li> Skeleton Part usage for linkage based product assemblies, being the UT27 (WIP) steering system</li>
+      </ul>
+    </div>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide"> <img src="assets/images/UT27/catia1.png" alt="Image 1">
+          <p>Main steering "Latest Schemes" assembly, being the fully published and publicised components. In-work components are held in Schemes folders. 3D wireframe and points (steering skeleton) are published to products. </p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT27/catia2.png" alt="Image 2">
+          <p>3D point and publications of points used to reference parts throughout sections - pictured are chassis cutout locations for mounting hole locations in welded inserts in tubes, published from Steering Skeleton. </p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT27/catia3.png" alt="Image 3">
+          <p>Steering Skeleton, pictured with chassis publications and steering native key points (eg clevis mounting point)</p>
+        </div>
+        
+      </div>
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </div>
+    </project> 
+	  
+	  
+	<project>
+    <div class="title">
+      <h3 class="subtitle_dark entry" style="">Minimum Viable Product Steering Column Load Assessment </h3>
+      <h4 class="norm_text entry">August 2026 </h4>
+    </div>
+    <h-line class="center"></h-line>
+    <div class="points">
+      <div>
+        <p class="norm_text"> With the switch to a DMLS metal 3D printed steering column mount, more accurate loads should be developed. Previously, maximum gym output numbers were used for 95% male. However, these exercises are not perfectly reflective of loads on the car, especially with the reclined position of the driver. </p>
+		  
+		<p class="norm_text"> Within a week and a half, we developed a load assessment assembly using components already present in the shop, including a hanging (fishing) scale found unused in a drawer. This assembly allowed us to get more accurate loads, while also costing zero extra expenses. </p>
+		<p class="norm_text">In Collaboration with: Rebecca Duarte. Under UTFR.</p>
+		
+      </div>
+      <ul class="norm_text">
+        <li> CAD and building of a steering input load asssessment system in 3D Experience CATIA </li>
+        <li> Rapid prototyping of MVPs, using preexisting resources and avoiding lead times where possible</li>
+        <li> Adaptation of a Driver-in-loop (driving sim) system to accomodate effectively a load cell using the hanging scale</li>
+        <li> Incorporation of aluminum sheet metal and 3D printed smooth bushings to concentrate loads on the scale</li>
+      </ul>
+    </div>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide"> <img src="assets/images/UT27/dil1.png" alt="Image 1">
+          <p>Driver-in-loop, sitting in the assembly. </p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT27/dil2.png" alt="Image 2">
+          <p>Physical assembly of load assessment rig. Made of existing sheet metal, hanging scale, and leftover bolts </p>
+        </div>
+        <div class="slide"> <img src="assets/images/UT27/dil3.png" alt="Image 3">
+          <p>Push/pull, right/left load assessment orientation of load cell. </p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT27/dil4.png" alt="Image 3">
+          <p>Vertical load assessment setups. Since a hanging scale is ineffective in this case, a typical flat scale is used</p>
+        </div>
+		<div class="slide"> <img src="assets/images/UT27/dil5.png" alt="Image 3">
+          <p>Data points collected from assessment session, used to optimize design of steerign column mount.</p>
+        </div>
+        
+      </div>
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </div>
+    </project> 
+	  
+	  <!--
 <project>
     <div class="title">
       <h3 class="subtitle_dark entry" style="">Current UT27 Progress </h3>
@@ -55,20 +178,20 @@
     <div class="carousel">
       <div class="slides">
         <div class="slide"> <img src="assets/images/UT27/progress1.png" alt="Image 1">
-          <p>The planned hydraulic and pneumatic circuits of the brakes and Emergency Braking System (EBS), respectively. Specific components, such as fluid sensors, are still being finalized. General circuit based on UT26 design. Made with Bosch Scheme editor.</p>
+          <p>Transient structural analysis of new style of 8x small bobbins (compared to UT26's 6x medium bobbins design). This was a packaging request to accomodate optimal wheel hub gear ratio, requiring enlarging inner profile of bobbins by 4mm in diameter. UT25 testing lap data was used to simulate fatigue load on brake bobbins, to ensure structural integrity through our design lifetime.  </p>
         </div>
         <div class="slide"> <img src="assets/images/UT27/progress2.png" alt="Image 2">
-          <p>Preliminary spaceclaim in front chassis area - pictured, from left to right, are is the steering column mount, steering column, steering rack assembly, pneumatic Emergency Braking System air tanks, and the pedal tray. These approximate dimensions, used alongside other sections' equivalents, were used to finalize layout and general space claims. </p>
+          <p>Major assembly state. Steering Skeleton 3D part contains the connecting points for the steering system, as it includes all components, being rigid and coupled. 3D points published from Chassis assembly, and Steering Skeleton assembly are used to create parts in place, sidestepping accidentally breaking engineering connections when new versions of parts are made. </p>
         </div>
         <div class="slide"> <img src="assets/images/UT27/progress3.png" alt="Image 3">
-          <p>Cadding and first prototyping of a steering input load asssessment system. The main load cell used is a hanging scale that was already in inventory, being unused for anything. This project required a quick turnaround of about a week, from inception to a completed build. This specific build does not give our loads to a satisfactory extent, and will be iterated upon.</p>
+          <p>CAD and building of a steering input load asssessment system. The main load cell used is a hanging scale that was already in inventory, being unused for anything. This project required a quick turnaround of about a week, from inception to a completed build. This specific build does not give our loads to a satisfactory extent, and will be iterated upon.</p>
         </div>
         
       </div>
       <button class="prev">‹</button>
       <button class="next">›</button>
     </div>
-    </project> 
+    </project> -->
 	
 	<project>
     <div class="title">

@@ -88,7 +88,7 @@ nav {
     background-position: center top;
 }
 .hero.drone {
-    background-image: url("../images/TB%20(drone).png");
+    background-image: url("../images/TB%20(drone)2.jpg");
     background-position: center top;
 }
 .tagline.drone {
@@ -637,6 +637,7 @@ entry:hover overlay {
 entry:hover p.subtitle_dark {
     color: #F5F5F5;
     transition: all 0.3s ease;
+    text-shadow: 2px 2px 2px #833D00;
 }
 .desc.title {
     width: auto;
@@ -1025,9 +1026,10 @@ projects entry .norm_text {
 entry:hover p.norm_text {
     display: block;
     transition: all 1s ease;
-    color: #FFE7C0;
+    color: #FFD29A;
     max-height: 100px;
-	pointer-events: none;
+    pointer-events: none;
+    text-shadow: 2px 2px 2px #7C4900;
 	
 }
 projects entry .subtitle_dark {
